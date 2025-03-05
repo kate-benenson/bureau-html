@@ -53,6 +53,10 @@ nav a {
   gap: 16px;
 }
 
+.header__right a {
+  text-decoration: none;
+}
+
 .phone {
   margin-top: 2px;
 }
