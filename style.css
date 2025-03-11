@@ -144,6 +144,10 @@ a:hover {
   .hero-section__desciption {
     font-size: 16px;
   }
+
+  .hero-section__image {
+    width: 100%;
+  }
 }
 
 footer {
