@@ -1,15 +1,16 @@
 body {
   margin: 0 auto;
-  width: 1000px;
+  max-width: 1000px;
   font-family: Roboto;
   font-weight: 400;
 }
 
 header {
-  padding: 8px 16px 0;
+  margin: 8px 16px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -21,6 +22,18 @@ header {
   line-height: normal;
   letter-spacing: -0.64px;
   padding-bottom: 11px;
+}
+
+@media screen and (max-width: 800px) {
+  .logo {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header > * {
+    flex: 1 0 50%;
+  }
 }
 
 a {
@@ -35,21 +48,36 @@ a {
   text-underline-position: from-font;
 }
 
-nav {
+a:hover {
+  color: #ca4436;
+  text-underline-offset: 17%;
+  text-decoration-thickness: 7%;
+}
+
+.desktop-menu {
   display: flex;
   align-items: baseline;
   gap: 32px;
 }
 
-nav a {
+.desktop-menu a {
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
 }
 
+@media screen and (max-width: 800px) {
+  .desktop-menu {
+    /* margin-top: 8px; */
+    gap: 16px;
+    order: 1;
+  }
+}
+
 .header__right {
   font-size: 20px;
   display: flex;
+  justify-content: end;
   gap: 16px;
 }
 
@@ -60,23 +88,62 @@ nav a {
 .phone {
   margin-top: 2px;
 }
+.phone__icon {
+  display: none;
+}
+.phone__icon > svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .phone__number {
+    display: none;
+  }
+  .phone__icon {
+    display: block;
+  }
+}
+
+.icon-cart {
+  width: 24px;
+  height: 28px;
+}
 
 .hero-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 64px;
+  margin: 64px 16px 0;
 }
 
 .hero-section__title {
+  margin: 0;
+  font-weight: 400;
   font-size: 96px;
   line-height: 1;
 }
 
 .hero-section__desciption {
   font-size: 24px;
-  padding-top: 6px;
+  margin-top: 6px;
+  margin-bottom: 20px;
   line-height: 1;
+  text-align: center;
+}
+
+.hero-section__image {
+  width: 89%;
+}
+
+@media screen and (max-width: 800px) {
+  .hero-section__title {
+    font-size: 48px;
+  }
+
+  .hero-section__desciption {
+    font-size: 16px;
+  }
 }
 
 footer {
@@ -98,4 +165,16 @@ footer {
 
 .footer__column .logo {
   padding-bottom: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  footer {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .footer__column:first-of-type {
+    order: 1;
+    flex-direction: column-reverse;
+  }
 }

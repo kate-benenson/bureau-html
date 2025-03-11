@@ -1,6 +1,7 @@
 <html>
   <head>
     <title>Tefal Optigill+ от магазина Прожарка</title>
+    <link type="image/png" href="./favicon.png" rel="icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
@@ -10,48 +11,83 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
     <header>
       <div class="logo">Прожарка</div>
-      <nav>
+      <nav class="desktop-menu">
         <a href="#">Грили</a>
         <a href="#">Мангалы</a>
         <a href="#">Аксессуары</a>
       </nav>
       <div class="header__right">
-        <a href="#" class="phone">8 800 600-27-50</a>
+        <a href="#" class="phone">
+          <span class="phone__number"> 8 800 600-27-50 </span>
+          <span class="phone__icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 25 25"
+              fill="none"
+            >
+              <path
+                fill="#000"
+                fill-rule="evenodd"
+                d="M6.11.058A1.988 1.988 0 0 1 8.196 1.26l2.509 5.854v.003a2 2 0 0 1-.15 1.872l-.007.01-2.083 3.17a9.45 9.45 0 0 0 4.4 4.39l.005-.003 3.122-2.086a1.987 1.987 0 0 1 1.905-.175l.004.001 5.84 2.508a1.987 1.987 0 0 1 1.2 2.086 7 7 0 0 1-6.94 6.11A18 18 0 0 1 0 7 7 7 0 0 1 6.11.058ZM7.562 12.6l-.902.432a2 2 0 0 1 .125-1.95l.004-.006L8.87 7.91l-.002-.005-2.512-5.862A5 5 0 0 0 2 7m5.563 5.6-.9.436a11.45 11.45 0 0 0 5.341 5.328l.005.002a2 2 0 0 0 1.973-.148l.003-.002 3.12-2.084 5.85 2.512h.002A5 5 0 0 1 18 23M2 7a16 16 0 0 0 16 16"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </span>
+        </a>
         <a href="#" class="icon-cart">
-          <img src="./icon-cart.svg" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 28"
+            fill="none"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-miterlimit="10"
+              stroke-width="1.5"
+              d="m8.811 3-3.62 3.63M15.191 3l3.62 3.63"
+            />
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-width="1.5"
+              d="M9.76 14v3.55M14.36 14v3.55M3.5 10C3.82 11.94 5 16.5 6 22h12c.5-2.5 2.14-10.12 2.5-12M2 7h20v3H2z"
+            />
+          </svg>
         </a>
       </div>
     </header>
     <section class="hero-section">
-      <div class="hero-section__title">Tefal Optigrill+</div>
-      <div class="hero-section__desciption">
+      <h1 class="hero-section__title">Tefal Optigrill+</h1>
+      <p class="hero-section__desciption">
         умный гриль для самых сочных стейков
-      </div>
-      <img src="./grill.png" />
+      </p>
+      <img class="hero-section__image" src="./grill.png" />
     </section>
 
     <footer>
-      <div class="footer__column">
+      <nav class="footer__column">
         <div class="logo">Прожарка</div>
 
         <a href="#">info@tefal.ru</a>
         <a href="#">8 800 600-27-50</a>
-      </div>
-      <div class="footer__column">
+      </nav>
+      <nav class="footer__column">
         <a href="#">Грили</a>
         <a href="#">Мангалы</a>
         <a href="#">Посуда</a>
         <a href="#">Аксессуары</a>
-      </div>
-      <div class="footer__column">
+      </nav>
+      <nav class="footer__column">
         <a href="#">Оферта</a>
         <a href="#">Конфиденциальность</a>
-      </div>
-      <div class="footer__column"></div>
+      </nav>
     </footer>
   </body>
 </html>
